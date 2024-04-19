@@ -10,8 +10,8 @@ wheights = [[0.2, 0.8, -0.5, 1.0],              #wheigts for neuron 1 on layer 1
 
 bias = [2, 3, 0.5]                              # bias neuron 1,2,3 on layer 1
 
-wheights2 = [[0.1, -0.13, -0.5],                #wheigts for neuron 1 on layer 2
-            [0.5, 0.12, -0.33],                 #wheigts for neuron 2 on layer 2
+wheights2 = [[0.1, -0.14, 0.5],                #wheigts for neuron 1 on layer 2
+            [-0.5, 0.12, -0.33],                 #wheigts for neuron 2 on layer 2
             [-0.44, 0.73, -0.13]]               #wheigts for neuron 3 on layer 2
 
 bias2 = [-1, 2, -0.5]                             #bias neuron 1,2,3 on layer 2
