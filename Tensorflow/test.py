@@ -24,7 +24,17 @@ model = keras.Sequential([
 
 model.compile(optimizer="adam", loss="sparse_categorical_crossentropy", metrics=["accuracy"])   #loss decides how much the wheights have to be tuned dependent on how wrong the output is. if we are far away from the correct output we can change the weight by a lot of number. Other way around not so much
  
-model.fit(train_images, train_labels, epochs=10)                                                 #gives the same images in a differant order, increases the accursascy of the model                                   
+model.fit(train_images, train_labels, epochs=5)                                                 #gives the same images in a differant order, increases the accursascy of the model                                   
 
 test_loss, test_acc = model.evaluate(test_images, test_labels)
-print("Tested Acc:", test_acc)
+
+prediction = model.predict(test_images)
+
+for i in range(5):
+    plt.grid(False)
+    plt.imshow(test_images[i], cmap=plt.cm.binary)
+    plt.xlabel("Actual: " + class_names[test_labels[i]])
+    plt.title("Prediction" + class_names[np.argmax(prediction[0])])
+    plt.show()
+
+#it only outputs ankle boot as every prediction ?=???????????????????????????????????
