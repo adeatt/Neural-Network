@@ -29,11 +29,11 @@ class Activision_ReLU:                                                  #activat
 
 
 
-layer1 = Layer_Dense(2,5)                                           
+layer1 = Layer_Dense(2,5)                                               # stillt layer 1                           
 activation1 = Activision_ReLU()
 
 layer1.forward(X)   
 
 
-activation1.foward(layer1. output)
+activation1.foward(layer1.output)
 print(activation1.output)
